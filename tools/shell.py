@@ -95,6 +95,7 @@ def head(slug, title, meta, extra_ld=""):
     )
     return """<!doctype html>
 <html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>%s</title>
@@ -125,7 +126,9 @@ def header(active=""):
     links = "".join(
         '<a href="%s"%s>%s</a>' % (h, ' aria-current="page"' if h == active else "", t)
         for h, t in NAV)
-    return """<a class="skip" href="#main">Skip to content</a>
+    return """</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="hdr">
   <div class="bar">
     <a class="brand" href="/" aria-label="AllAboutHR home"><img src="/assets/logo.webp" alt="AllAboutHR" width="1205" height="160"></a>
@@ -230,6 +233,7 @@ def footer():
     </div>
   </div>
 </footer>
+</body>
 </html>
 """ % (ADDRESS_HTML, MAIL, MAIL, PHONE_HREF, PHONE_DISPLAY, MAP_URL, cols)
 
