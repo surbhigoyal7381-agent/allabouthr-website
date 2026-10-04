@@ -1,0 +1,5 @@
+# AllAboutHR — https://allabouthr.co
+User-agent: *
+Allow: /
+
+Sitemap: https://allabouthr.co/sitemap.xml
