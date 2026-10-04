@@ -352,6 +352,65 @@ The `7+ yrs / In business` hero stat is now **`3+ yrs`** (April 2023 → October
 weaker number, but it is the true one. If you would rather lead with something else there,
 `500+ placements` or `50+ organisations` are both stronger and both already on the page.
 
+## Deploying to Netlify
+
+**The GitHub repo is not connected to the Netlify site.** As of the first push, the live
+site was still serving an older manual deploy — the ETag did not change and none of the new
+files appeared. That is consistent with the repo having been empty while the site was live:
+the site is a drag-and-drop or CLI deploy, not a Git build.
+
+Connecting the repo is a one-time job and makes every future push deploy itself.
+
+### Option A — connect the repo (recommended)
+
+1. Netlify → your site → **Site configuration → Build & deploy → Continuous deployment**.
+2. **Link repository** → GitHub → `surbhigoyal7381-agent/allabouthr-website`.
+3. Build settings — **this is the part that matters**:
+   - **Branch to deploy:** `main`
+   - **Build command:** *leave completely empty*
+   - **Publish directory:** `.` (the repository root)
+   - **Functions directory:** empty
+4. **Deploy site.**
+
+There is no build step. If Netlify auto-suggests one (it sometimes guesses `npm run build`
+from the presence of a `tools/` folder), clear it — a build command on a site with no
+`package.json` will fail the deploy.
+
+### Option B — deploy manually now
+
+Netlify → **Deploys → Drag and drop your site output folder here**, and drop the whole
+repository folder. Or from the CLI:
+
+```
+npx netlify-cli deploy --dir . --prod
+```
+
+Manual deploys do not stay in sync with Git, so Option A is still worth doing afterwards.
+
+### After the deploy — verify it
+
+```
+python tools/verify_live.py
+```
+
+It checks the 27 pages, robots.txt and sitemap.xml, the homepage head tags, that an unknown
+URL returns a real 404 with the branded page, and that the `_redirects` rules are live.
+Exit code 1 if anything is wrong, so it can gate a release. Point it at a deploy preview
+first if you want: `python tools/verify_live.py https://<preview>.netlify.app`.
+
+### If the deploy fails or looks wrong
+
+Netlify keeps serving the last good deploy when a build fails, so the site does not go down.
+To undo a bad deploy: **Deploys → pick the previous deploy → Publish deploy**.
+
+The things most likely to go wrong, in order:
+
+- **A build command is set.** There is no build. Clear it.
+- **Publish directory is not the root.** `_redirects`, `robots.txt`, `sitemap.xml` and
+  `404.html` must sit at the root of what gets published, or none of them work.
+- **`_redirects` not applied.** Check it is in the published output and that the deploy log
+  says it processed the rules.
+
 ## After deploying — tell Google
 
 The pages exist now, but Google will not notice quickly on its own.
