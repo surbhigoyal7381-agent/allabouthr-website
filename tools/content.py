@@ -125,7 +125,7 @@ add(
 
       <h2>In numbers</h2>
       <dl class="facts">
-        <div><dt>In business</dt><dd>Since 2023, from Mohali, Punjab</dd></div>
+        <div><dt>In business</dt><dd>Since April 2023, from Sector 70, Mohali</dd></div>
         <div><dt>Candidates placed</dt><dd>500+</dd></div>
         <div><dt>Organisations served</dt><dd>50+, across fifteen industries</dd></div>
         <div><dt>Google reviews</dt><dd>125+ at five stars</dd></div>
@@ -713,7 +713,7 @@ add(
 
       <h2>The track record</h2>
       <dl class="facts">
-        <div><dt>In business</dt><dd>Since 2023, from Mohali, Punjab</dd></div>
+        <div><dt>In business</dt><dd>Since April 2023, from Sector 70, Mohali</dd></div>
         <div><dt>Organisations served</dt><dd>50+, across fifteen industries</dd></div>
         <div><dt>Candidates placed</dt><dd>500+</dd></div>
         <div><dt>Google reviews</dt><dd>125+ at five stars</dd></div>
@@ -743,11 +743,12 @@ add(
         <div><dt>WhatsApp</dt><dd><a href="https://wa.me/917696004555?text=Hi%20AllAboutHR%20%E2%80%94%20I%20would%20like%20to%20talk%20about%20my%20business." target="_blank" rel="noopener">+91 76960 04555</a> &mdash; fastest</dd></div>
         <div><dt>Phone</dt><dd><a href="tel:+917696004555">+91 76960 04555</a></dd></div>
         <div><dt>Email</dt><dd><a href="mailto:hello@allabouthr.co">hello@allabouthr.co</a></dd></div>
-        <div><dt>Based in</dt><dd>Mohali, Punjab, India</dd></div>
+        <div><dt>Address</dt><dd><address style="font-style:normal;line-height:1.6">Chamber No. 209, Second Floor, AB Chambers,<br>SCO No. 1068, Mattaur, Sector 70,<br>SAS Nagar (Mohali), Punjab 160071</address>
+          <a href="https://www.google.com/maps/place/?q=place_id:ChIJs49QZn_pDzkRCLf3CWTHPVo" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></dd></div>
         <div><dt>Working with</dt><dd>Clients across India, from ten people to 2,500</dd></div>
       </dl>
 
-      <p>From Mohali we work with clients across the country. If you would rather write it out
+      <p>We are on the second floor of AB Chambers in Sector 70, and from there we work with clients across the country. If you would rather write it out
       than talk, there is a <a href="/#/contact">short enquiry form on the main site</a> — it
       asks for your headcount and which of our three streams sounds closest, which saves a
       round of questions.</p>
@@ -791,7 +792,8 @@ add(
 "about":{"@type":"ProfessionalService","name":"AllAboutHR",
  "telephone":"+91-76960-04555","email":"hello@allabouthr.co",
  "url":"https://allabouthr.co",
- "address":{"@type":"PostalAddress","addressLocality":"Mohali","addressRegion":"Punjab","addressCountry":"IN"},
+ "address":{"@type":"PostalAddress","streetAddress":"Chamber No. 209, Second Floor, AB Chambers, SCO No. 1068, Mattaur, Sector 70","addressLocality":"Mohali","addressRegion":"Punjab","postalCode":"160071","addressCountry":"IN"},
+ "hasMap":"https://www.google.com/maps/place/?q=place_id:ChIJs49QZn_pDzkRCLf3CWTHPVo",
  "areaServed":{"@type":"Country","name":"India"},
  "availableLanguage":["en","hi","pa"]}}
 </script>""",

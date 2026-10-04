@@ -195,11 +195,21 @@ fire.
    **WhatsApp Business account with both people added as agents**, then replace every
    `wa.me/` number with that one. That is the only real solution, and it is free.
 
-2. **The postal address.** The recovered pages say "Mohali, Punjab, India" and nothing more,
-   because the old site's address (Sector 108) and the current Google Business Profile
-   (Sector 70) disagree and I would not guess. **For local SEO this is worth fixing** — put
-   the real street address into `tools/shell.py` (`footer()`) and `/contact-us/`, and add
-   `LocalBusiness` structured data while you are there.
+2. **The postal address is now published** — taken from the Google Business Profile
+   (place id `ChIJs49QZn_pDzkRCLf3CWTHPVo`, corroborated across independent searches):
+
+   > Chamber No. 209, Second Floor, AB Chambers, SCO No. 1068,
+   > Mattaur, Sector 70, SAS Nagar (Mohali), Punjab 160071
+
+   It appears in the footer of all 26 path-based pages (inside `<address>`), on
+   `/contact-us/`, and as a complete `PostalAddress` with `postalCode` and `hasMap` in the
+   `Organization` and `ContactPage` schema. Set once in `tools/shell.py`.
+
+   **Two things to keep an eye on.** The Business Profile lists
+   `mahavir.singh@allabouthr.co` while the site uses `hello@allabouthr.co` — not an NAP
+   problem (name, address and phone all match), but worth aligning. And **no geo coordinates
+   are published**, because I had no verified latitude/longitude and would not guess; adding
+   `geo` to the `Organization` block is a small further win for the map pack.
 
 3. **The five client pages need your facts.** `/jcbl/`, `/nahar-group-of-companies/`,
    `/amit-engineers-mohali/`, `/shoolini-university/` and `/r-b-university-mohali/` state the

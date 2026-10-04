@@ -12,6 +12,15 @@ PHONE_DISPLAY = "+91 76960 04555"
 PHONE_HREF = "+917696004555"
 MAIL = "hello@allabouthr.co"
 
+# From the Google Business Profile (place id ChIJs49QZn_pDzkRCLf3CWTHPVo).
+STREET = "Chamber No. 209, Second Floor, AB Chambers, SCO No. 1068, Mattaur, Sector 70"
+LOCALITY = "Mohali"
+REGION = "Punjab"
+POSTCODE = "160071"
+MAP_URL = "https://www.google.com/maps/place/?q=place_id:ChIJs49QZn_pDzkRCLf3CWTHPVo"
+ADDRESS_HTML = ("Chamber No. 209, Second Floor,<br>AB Chambers, SCO No. 1068,<br>"
+                "Mattaur, Sector 70,<br>SAS Nagar (Mohali), Punjab 160071")
+
 FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
@@ -206,9 +215,12 @@ def footer():
       <div>
         <img src="/assets/logo.webp" alt="AllAboutHR" width="1205" height="160">
         <p style="font-size:.93rem;color:var(--slate);max-width:34ch">Talent, technology and transformation for Indian businesses. One house, three streams, one loop that closes.</p>
-        <p style="font-size:.93rem;color:var(--slate)">Mohali, Punjab, India<br>
+        <address style="font-size:.93rem;color:var(--slate);font-style:normal;line-height:1.6">
+          %s<br>
           <a href="mailto:%s">%s</a><br>
-          <a href="tel:%s">%s</a></p>
+          <a href="tel:%s">%s</a><br>
+          <a href="%s" target="_blank" rel="noopener">Find us on Google Maps</a>
+        </address>
       </div>
       %s
     </div>
@@ -219,7 +231,7 @@ def footer():
   </div>
 </footer>
 </html>
-""" % (MAIL, MAIL, PHONE_HREF, PHONE_DISPLAY, cols)
+""" % (ADDRESS_HTML, MAIL, MAIL, PHONE_HREF, PHONE_DISPLAY, MAP_URL, cols)
 
 
 def page(slug, title, meta, eyebrow, h1, lede, content, trail,
