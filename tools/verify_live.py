@@ -38,7 +38,9 @@ PAGES = [
     "/we-help-individuals-and-businesses-make-things-happen-for-their-dream/",
 ]
 ASSETS = ["/robots.txt", "/sitemap.xml", "/assets/site.css",
-          "/assets/og-cover.png", "/assets/logo.webp"]
+          "/assets/og-cover.png", "/assets/logo.webp",
+          # Lose this and Search Console silently un-verifies the property.
+          "/googleb3f9b7b384b96ddd.html"]
 REDIRECTS = [("/about", "/about-us/"), ("/contact", "/contact-us/"),
              ("/pricing", "/packages/"), ("/careers", "/job-openings/"),
              ("/reviews", "/testimonials/"), ("/our-clients", "/clients/"),
