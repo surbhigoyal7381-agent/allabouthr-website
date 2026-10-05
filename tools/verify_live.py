@@ -40,7 +40,12 @@ PAGES = [
 ASSETS = ["/robots.txt", "/sitemap.xml", "/assets/site.css",
           "/assets/og-cover.png", "/assets/logo.webp"]
 REDIRECTS = [("/about", "/about-us/"), ("/contact", "/contact-us/"),
-             ("/pricing", "/packages/"), ("/careers", "/job-openings/")]
+             ("/pricing", "/packages/"), ("/careers", "/job-openings/"),
+             ("/reviews", "/testimonials/"), ("/our-clients", "/clients/"),
+             ("/job-opportunities", "/job-openings/"),
+             ("/sitemap_index.xml", "/sitemap.xml"),
+             ("/we-help-you-to-make-business-strategy",
+              "/we-help-you-to-make-business-stratgey/")]
 
 fails = []
 
@@ -105,6 +110,21 @@ def main():
         fails.append("unknown URL returned %s, want 404" % code)
     if not branded:
         fails.append("404 is not the branded page — check 404.html deployed")
+
+    # The recovered pages used to link onward only via hash routes, which a
+    # crawler cannot follow. Confirm the deployed copies do not.
+    print("crawlable internal links")
+    hashy = []
+    for p in PAGES:
+        if p == "/":
+            continue  # the single-page site routes by fragment by design
+        _, b, _ = get(p)
+        if b'href="/#/' in b:
+            hashy.append(p)
+    print("  %d/%d pages free of hash-route links"
+          % (len(PAGES) - 1 - len(hashy), len(PAGES) - 1))
+    for p in hashy:
+        fails.append("%s still links to a hash route" % p)
 
     print("redirects")
     for src, want in REDIRECTS:

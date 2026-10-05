@@ -411,6 +411,55 @@ The things most likely to go wrong, in order:
 - **`_redirects` not applied.** Check it is in the published output and that the deploy log
   says it processed the rules.
 
+## Hash routes removed from the recovered pages (5 October 2026)
+
+Google was still returning results for AllAboutHR whose onward links went nowhere. The cause
+was not a missing page. Every recovered page carried its internal links as **hash routes**
+(`/#/packages`, `/#/consulting`, `/#/review`, `/#/about`), written before the four commercial
+pages existed at real URLs.
+Googlebot does not follow a fragment, so 71 internal links pointed at somewhere no crawler
+could reach. The pages Google *had* indexed offered it no route onward.
+
+What changed:
+
+| Was | Now |
+| --- | --- |
+| `/#/packages` | `/packages/` |
+| `/#/consulting` | `/consulting/` |
+| `/#/alvora` | `/alvora/` |
+| `/#/kinexus` | `/kinexus/` |
+| `/#/about` (meant "the full client wall") | `/clients/` |
+| `/#/review` (reading reviews) | `/testimonials/` |
+| `/#/review` (leaving one) | the real Google write-review URL |
+| `/#/contact` | the enquiry form on the main site |
+
+`shell.py` gained `ext()`, so a card or CTA whose href leaves the site emits `target="_blank"`
+and `rel="noopener"` by itself, and `cta()`'s default second link is no longer a hash route.
+`check_pages.py` now **fails** on any `href="/#/..."`, so this cannot come back. `index.html`
+is exempt: it is the single-page site and routes by fragment by design.
+
+On `/clients/`, the sentence "the complete list is on the about page" was circular — the wall
+is rendered directly above it — so it now points at the company story instead.
+
+### Redirects added at the same time
+
+A sweep of 80 legacy and guessable URL shapes against the live site found these still
+returning 404. They are now 301s:
+
+* `/we-help-you-to-make-business-strategy` — the real page keeps the old site's
+  typo (`stratgey`), so the correct spelling has to be caught
+* `/our-clients`, `/our-services`, `/hr-services`
+* `/job-opportunities`, `/job-opportunity`, `/current-openings`, `/vacancies`
+* `/sitemap_index.xml`, `/wp-sitemap.xml`, `/sitemap-index.xml` — the WordPress sitemap
+  addresses, which may still be on file in Search Console
+* `/reviews` and `/review`, which pointed at a hash route, now go to `/testimonials/`
+
+WordPress archive shapes (`/category/*`, `/tag/*`, `/author/*`, `/page/2/`, `/index.php`) are
+deliberately left as 404s: they no longer exist and 404 is the honest signal.
+
+`tools/verify_live.py` now also checks that no deployed page links to a hash route, and covers
+the new redirects.
+
 ## After deploying — tell Google
 
 The pages exist now, but Google will not notice quickly on its own.
