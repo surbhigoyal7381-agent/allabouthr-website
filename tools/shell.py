@@ -18,6 +18,11 @@ LOCALITY = "Mohali"
 REGION = "Punjab"
 POSTCODE = "160071"
 MAP_URL = "https://www.google.com/maps/place/?q=place_id:ChIJs49QZn_pDzkRCLf3CWTHPVo"
+# Where the 125+ reviews live, and the form for leaving one. Both taken from the
+# review section of the main site, so prose about reviews can link out for real
+# instead of pointing at a hash route no crawler can follow.
+REVIEWS_URL = MAP_URL
+WRITE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJs49QZn_pDzkRCLf3CWTHPVo"
 ADDRESS_HTML = ("Chamber No. 209, Second Floor,<br>AB Chambers, SCO No. 1068,<br>"
                 "Mattaur, Sector 70,<br>SAS Nagar (Mohali), Punjab 160071")
 
@@ -177,11 +182,16 @@ def body(html):
             '    </div>\n  </article>' % html)
 
 
+def ext(href):
+    """Attributes for a link that leaves the site. Empty for an internal one."""
+    return ' target="_blank" rel="noopener"' if href.startswith("http") else ""
+
+
 def nextrow(cards):
     c = "".join(
-        '<a class="card hov" href="%s"><span class="tag %s">%s</span><h4>%s</h4>'
+        '<a class="card hov" href="%s"%s><span class="tag %s">%s</span><h4>%s</h4>'
         '<p>%s</p><p class="go">%s &rarr;</p></a>'
-        % (href, tone, esc(tag), esc(title), esc(txt), esc(cta_label))
+        % (href, ext(href), tone, esc(tag), esc(title), esc(txt), esc(cta_label))
         for href, tone, tag, title, txt, cta_label in cards)
     return ('\n  <section class="band alt">\n    <div class="wrap">\n'
             '      <div class="sechead"><p class="eyebrow">Where to next</p>'
@@ -189,7 +199,7 @@ def nextrow(cards):
             '      <div class="nextrow">%s</div>\n    </div>\n  </section>' % c)
 
 
-def cta(h2, p, wa_msg, second=("/#/packages", "See the packages")):
+def cta(h2, p, wa_msg, second=("/packages/", "See the packages")):
     return """
   <section class="band">
     <div class="wrap">
@@ -199,11 +209,12 @@ def cta(h2, p, wa_msg, second=("/#/packages", "See the packages")):
         <p>%s</p>
         <div class="acts">
           <a class="btn btn-w" href="%s?text=%s" target="_blank" rel="noopener">%sMessage us on WhatsApp</a>
-          <a class="btn btn-o" href="%s">%s</a>
+          <a class="btn btn-o" href="%s"%s>%s</a>
         </div>
       </div>
     </div>
-  </section>""" % (esc(h2), esc(p), WA, wa_msg, WA_ICON, second[0], esc(second[1]))
+  </section>""" % (esc(h2), esc(p), WA, wa_msg, WA_ICON, second[0], ext(second[0]),
+                    esc(second[1]))
 
 
 def footer():

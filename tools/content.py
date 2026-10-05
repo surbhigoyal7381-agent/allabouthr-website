@@ -35,7 +35,7 @@ C_SERVICES = [
     ("/training/", "p", "Training", "Training",
      "Technical skills, communication, HR workshops and internships — delivered and then tracked.",
      "See the programmes"),
-    ("/#/packages", "t", "Packages", "Six packages",
+    ("/packages/", "t", "Packages", "Six packages",
      "From ten people upwards. Each one says what it includes and when it stops being the right fit.",
      "Compare them"),
 ]
@@ -47,13 +47,13 @@ C_PROOF = [
     ("/contact-us/", "t", "Contact", "Talk to us",
      "WhatsApp, email or a thirty-minute call. Most people leave clearer about their actual problem.",
      "Get in touch"),
-    ("/#/review", "p", "Reviews", "What clients say",
+    ("/testimonials/", "p", "Reviews", "What clients say",
      "125+ five-star Google reviews from the businesses and candidates we have worked with.",
      "Read the reviews"),
 ]
 
 C_CLIENTS = [
-    ("/#/about", "t", "Clients", "The full client wall",
+    ("/clients/", "t", "Clients", "The full client wall",
      "Fifty-plus organisations across fifteen industries, grouped by sector.",
      "See every client"),
     ("/why-choose-allabouthr/", "p", "Promises", "Why choose AllAboutHR",
@@ -343,7 +343,7 @@ add(
       <div class="note">
         <h4>What it costs</h4>
         <p>Standard recruitment runs at 8.33% of annual package. On our
-        <a href="/#/packages">Operate package</a> and above it drops to <strong>6%</strong>,
+        <a href="/packages/">Operate package</a> and above it drops to <strong>6%</strong>,
         with cheaper background checks, because the hiring sits inside a retainer we are
         already running. We will tell you which way round is cheaper for you.</p>
       </div>
@@ -367,7 +367,7 @@ add(
       <p><a href="/job-openings/">Send us your CV &rarr;</a></p>
 
       <h2>Where the recruitment sits in the bigger picture</h2>
-      <p>Hiring is the third of the five steps in our <a href="/#/consulting">Growth
+      <p>Hiring is the third of the five steps in our <a href="/consulting/">Growth
       Loop</a> — <em>Source</em>, after <em>See</em> and <em>Shape</em>. That order matters. If
       your appraisal system is guesswork and your pay bands do not exist, hiring harder will
       not fix your attrition. We will say so before we take the mandate.</p>""",
@@ -378,7 +378,7 @@ add(
         ("/training/", "p", "Training", "Training",
          "Sometimes the problem is not who you hired — it is that nobody developed them.",
          "See the programmes"),
-        ("/#/consulting", "t", "Consulting", "The Growth Loop",
+        ("/consulting/", "t", "Consulting", "The Growth Loop",
          "Five steps from “something is wrong” to “here is the proof it improved”.",
          "See how we work"),
     ],
@@ -438,7 +438,7 @@ add(
 
       <h2>How we price it</h2>
       <p>Programmes are quoted per cohort, against the number of people and the number of days.
-      On the <a href="/#/packages">Perform package</a> and above, manager training and review
+      On the <a href="/packages/">Perform package</a> and above, manager training and review
       training are already included — so if you are on a retainer with us, ask before you buy
       a programme separately.</p>""",
     cards=[
@@ -448,7 +448,7 @@ add(
         ("/jobs/", "p", "Jobs", "Hiring",
          "Search, bulk hiring, campus hiring and background checks.",
          "See the hiring work"),
-        ("/#/alvora", "t", "Software", "Alvora Learning",
+        ("/alvora/", "t", "Software", "Alvora Learning",
          "Training delivered and tracked against the skills your appraisals already use.",
          "See the platform"),
     ],
@@ -562,7 +562,7 @@ add(
     content="""      <h2>1 &middot; Strategic HR consulting</h2>
       <p>We find out what is really wrong with your HR, design the fix, help you run it, then
       check a year later whether it worked — in numbers, not opinions. The framework is the
-      <strong><a href="/#/consulting">Growth Loop</a></strong>: five steps from
+      <strong><a href="/consulting/">Growth Loop</a></strong>: five steps from
       &ldquo;something is wrong&rdquo; to &ldquo;here is the proof it improved&rdquo;.</p>
       <ul>
         <li><strong>See</strong> — a six-week health check of your HR. Fifteen areas, each
@@ -591,7 +591,7 @@ add(
         <li><strong>Alvora Learning</strong> — training delivered and tracked against the same
         skills your appraisals use.</li>
       </ul>
-      <p><a href="/#/alvora">See the platforms &rarr;</a></p>
+      <p><a href="/alvora/">See the platforms &rarr;</a></p>
 
       <h2>3 &middot; Operations excellence — Kinexus Systems</h2>
       <p>We build the software your business is missing, and add AI to take routine work off
@@ -606,7 +606,7 @@ add(
         <li><strong>Agents</strong> — AI on the repetitive jobs, priced per job automated rather
         than per user.</li>
       </ul>
-      <p><a href="/#/kinexus">See what we build &rarr;</a></p>
+      <p><a href="/kinexus/">See what we build &rarr;</a></p>
 
       <h2>Talent, training and jobs</h2>
       <p>The three services we started with are still the way most clients meet us:</p>
@@ -627,7 +627,7 @@ add(
       upwards — each one says what problem it solves, exactly what is included, and when it
       stops being the right fit. Systems work is quoted against what we actually find, so you
       never buy parts you do not need.</p>
-      <p><a href="/#/packages">See the six packages &rarr;</a></p>
+      <p><a href="/packages/">See the six packages &rarr;</a></p>
 
       <h2>More on how we think</h2>
       <div class="nextrow" style="margin:18px 0 26px">
@@ -749,7 +749,7 @@ add(
       </dl>
 
       <p>We are on the second floor of AB Chambers in Sector 70, and from there we work with clients across the country. If you would rather write it out
-      than talk, there is a <a href="/#/contact">short enquiry form on the main site</a> — it
+      than talk, there is a <a href="/">short enquiry form on the main site</a> — it
       asks for your headcount and which of our three streams sounds closest, which saves a
       round of questions.</p>
 
@@ -770,11 +770,11 @@ add(
       <h2>Reaching the right part of the house</h2>
       <ul>
         <li><strong>People problems</strong> — staff leaving, appraisals that mean nothing,
-        compliance you cannot prove: start at <a href="/#/consulting">Consulting</a> or the
-        <a href="/#/packages">packages</a>.</li>
-        <li><strong>HR or hiring software</strong>: <a href="/#/alvora">Alvora</a>.</li>
+        compliance you cannot prove: start at <a href="/consulting/">Consulting</a> or the
+        <a href="/packages/">packages</a>.</li>
+        <li><strong>HR or hiring software</strong>: <a href="/alvora/">Alvora</a>.</li>
         <li><strong>You cannot see what is happening in the business</strong>:
-        <a href="/#/kinexus">Kinexus Systems</a>, who can also be reached on their own site at
+        <a href="/kinexus/">Kinexus Systems</a>, who can also be reached on their own site at
         <a href="https://www.kinexus.co.in" target="_blank" rel="noopener">kinexus.co.in</a>.</li>
         <li><strong>Looking for a job</strong>: <a href="/job-openings/">send us your CV</a> —
         candidates are never charged.</li>
@@ -782,7 +782,7 @@ add(
       </ul>
 
       <h2>Already worked with us?</h2>
-      <p><a href="/#/review">Leave us a Google review</a> — it takes about two minutes and helps
+      <p><a href="https://search.google.com/local/writereview?placeid=ChIJs49QZn_pDzkRCLf3CWTHPVo" target="_blank" rel="noopener">Leave us a Google review</a> — it takes about two minutes and helps
       the next business choose well. If a project did not go the way you hoped, tell us first
       and one of the founders will reply.</p>""",
     cards=C_PROOF,
@@ -801,5 +801,5 @@ add(
     cta_p=("Tell us what is going wrong in a sentence or two. You will get questions back, not "
            "a sales deck."),
     wa="Hi%20AllAboutHR%20%E2%80%94%20I%20would%20like%20to%20talk%20about%20my%20business.",
-    cta_second=("/#/contact", "Use the form instead"),
+    cta_second=("/", "Use the form on the main site"),
 )

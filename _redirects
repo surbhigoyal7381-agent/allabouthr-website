@@ -23,10 +23,27 @@
 /clients.html                /clients/                          301
 /our-clientele               /clients/                          301
 /testimonial                 /testimonials/                     301
-/reviews                     /#/review                          301
+/reviews                     /testimonials/                     301
+/review                      /testimonials/                     301
 /what-our-clients-say        /testimonials/                     301
 /rb-university-mohali        /r-b-university-mohali/            301
 /nahar-group                 /nahar-group-of-companies/         301
+
+# The real page carries the old site's typo (stratgey). Catch the
+# correct spelling so a hand-typed or corrected link still lands.
+/we-help-you-to-make-business-strategy /we-help-you-to-make-business-stratgey/ 301
+/our-clients                 /clients/                          301
+/our-services                /service-best-expert-solution/     301
+/hr-services                 /service-best-expert-solution/     301
+/job-opportunities           /job-openings/                     301
+/job-opportunity             /job-openings/                     301
+/current-openings            /job-openings/                     301
+/vacancies                   /job-openings/                     301
+
+# The old WordPress sitemap addresses, still on file in Search Console.
+/sitemap_index.xml           /sitemap.xml                       301
+/wp-sitemap.xml              /sitemap.xml                       301
+/sitemap-index.xml           /sitemap.xml                       301
 
 # WordPress leftovers — kill the crawl budget they waste.
 /wp-admin/*                  /404.html                          404

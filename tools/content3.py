@@ -59,8 +59,8 @@ add(
     content="""%s
       <h2>The full wall</h2>
       <p>The pages above are the clients who had their own page on our previous site. The
-      complete list — fifty-plus organisations grouped by sector, with logos — is on the
-      <a href="/#/about">about page</a>.</p>
+      complete list — fifty-plus organisations grouped by sector — is the wall above. How
+      the house came together is on the <a href="/about-us/">about page</a>.</p>
 
       <div class="note">
         <h4>Ask for a reference, not a case study</h4>
@@ -72,7 +72,7 @@ add(
       <h2>What clients say</h2>
       <p>Three accounts in full, from a chartered accountancy firm and two candidates, are on
       the <a href="/testimonials/">testimonials page</a>. There are 125+ five-star reviews on
-      <a href="/#/review">Google</a>.</p>""" % group_html(CLIENT_GROUPS),
+      <a href="https://www.google.com/maps/place/?q=place_id:ChIJs49QZn_pDzkRCLf3CWTHPVo" target="_blank" rel="noopener">Google</a>.</p>""" % group_html(CLIENT_GROUPS),
     cards=[
         ("/testimonials/", "p", "Proof", "Testimonials",
          "What clients and candidates said, in their own words and in full.",
@@ -88,7 +88,7 @@ add(
     cta_p=("Tell us your industry and we will put you in touch with a client in it. That is "
            "worth more than anything we could write ourselves."),
     wa="Hi%20AllAboutHR%20%E2%80%94%20could%20I%20speak%20to%20a%20client%20reference%20in%20my%20industry%3F",
-    cta_second=("/#/about", "See every client"),
+    cta_second=("/about-us/", "Read the company story"),
 )
 
 # --- /testimonials/ ---------------------------------------------------------
@@ -133,7 +133,7 @@ add(
       <h2>125+ five-star reviews</h2>
       <p>Beyond these three, the businesses and candidates we have worked with since 2023 have
       left more than 125 five-star reviews on Google. You can
-      <a href="/#/review">read them, or add your own</a>.</p>
+      <a href="https://www.google.com/maps/place/?q=place_id:ChIJs49QZn_pDzkRCLf3CWTHPVo" target="_blank" rel="noopener">read them</a>, or <a href="https://search.google.com/local/writereview?placeid=ChIJs49QZn_pDzkRCLf3CWTHPVo" target="_blank" rel="noopener">add your own</a>.</p>
 
       <h2>If it did not go well</h2>
       <p>If a project did not go the way you hoped, tell us first rather than the internet.
@@ -147,7 +147,7 @@ add(
         ("/job-openings/", "p", "Candidates", "Looking for a job?",
          "Send your CV. We are paid by the employer, never by you.",
          "Send your CV"),
-        ("/#/review", "t", "Google", "Leave a review",
+        ("https://search.google.com/local/writereview?placeid=ChIJs49QZn_pDzkRCLf3CWTHPVo", "t", "Google", "Leave a review",
          "Worked with us? Two minutes, and it helps the next business choose well.",
          "Write a review"),
     ],
@@ -155,5 +155,5 @@ add(
     cta_p=("Whether you are hiring or looking for a role, one message is enough to start. You "
            "will get a straight answer either way."),
     wa="Hi%20AllAboutHR%20%E2%80%94%20I%20read%20your%20testimonials%20and%20would%20like%20to%20talk.",
-    cta_second=("/#/review", "Read the Google reviews"),
+    cta_second=("https://www.google.com/maps/place/?q=place_id:ChIJs49QZn_pDzkRCLf3CWTHPVo", "Read the Google reviews"),
 )

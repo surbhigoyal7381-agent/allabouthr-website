@@ -163,6 +163,12 @@ def main():
             all_internal.add(href)
             if not resolves(href):
                 fail(rel, "broken internal link %s" % href)
+            # A hash route is a dead end for a crawler: Googlebot will not
+            # follow /#/packages, so a page that links that way leaks every
+            # bit of its internal linking. Every stream now has a real URL,
+            # so there is no longer any reason to point at one.
+            if href.startswith("/#/"):
+                fail(rel, "link to hash route %s — use the real page URL" % href)
 
         # 7 — external links must be safe
         for a in re.findall(r"<a [^>]*href=\"https?://[^\"]+\"[^>]*>", text):

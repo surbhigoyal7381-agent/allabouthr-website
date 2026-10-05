@@ -61,7 +61,7 @@ def write(path, text):
 def build_page(p):
     cta_block = shell.cta(
         p["cta_h2"], p["cta_p"], p["wa"],
-        p.get("cta_second", ("/#/packages", "See the packages")))
+        p.get("cta_second", ("/packages/", "See the packages")))
     html = shell.page(
         slug=p["slug"],
         title=p["title"],
@@ -96,7 +96,7 @@ def build_404():
             ("/our-team/", "Our team"),
             ("/why-choose-allabouthr/", "Why choose AllAboutHR"),
             ("/contact-us/", "Contact us"),
-            ("/#/packages", "Packages and prices"),
+            ("/packages/", "Packages and prices"),
         ])
     html = (
         shell.head("404", "Page not found — AllAboutHR",
@@ -176,10 +176,29 @@ def build_redirects():
         ("/clients.html", "/clients/", "301"),
         ("/our-clientele", "/clients/", "301"),
         ("/testimonial", "/testimonials/", "301"),
-        ("/reviews", "/#/review", "301"),
+        # Never send a crawler to a hash route — it cannot follow one.
+        ("/reviews", "/testimonials/", "301"),
+        ("/review", "/testimonials/", "301"),
         ("/what-our-clients-say", "/testimonials/", "301"),
         ("/rb-university-mohali", "/r-b-university-mohali/", "301"),
         ("/nahar-group", "/nahar-group-of-companies/", "301"),
+        ("", None, None),
+        ("# The real page carries the old site's typo (stratgey). Catch the", None, None),
+        ("# correct spelling so a hand-typed or corrected link still lands.", None, None),
+        ("/we-help-you-to-make-business-strategy",
+         "/we-help-you-to-make-business-stratgey/", "301"),
+        ("/our-clients", "/clients/", "301"),
+        ("/our-services", "/service-best-expert-solution/", "301"),
+        ("/hr-services", "/service-best-expert-solution/", "301"),
+        ("/job-opportunities", "/job-openings/", "301"),
+        ("/job-opportunity", "/job-openings/", "301"),
+        ("/current-openings", "/job-openings/", "301"),
+        ("/vacancies", "/job-openings/", "301"),
+        ("", None, None),
+        ("# The old WordPress sitemap addresses, still on file in Search Console.", None, None),
+        ("/sitemap_index.xml", "/sitemap.xml", "301"),
+        ("/wp-sitemap.xml", "/sitemap.xml", "301"),
+        ("/sitemap-index.xml", "/sitemap.xml", "301"),
         ("", None, None),
         ("# WordPress leftovers — kill the crawl budget they waste.", None, None),
         ("/wp-admin/*", "/404.html", "404"),

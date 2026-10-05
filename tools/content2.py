@@ -21,7 +21,7 @@ from shell import esc
 CLIENT_COMMON = """
       <h2>Working with us</h2>
       <p>Client engagements run through the five steps of our
-      <a href="/#/consulting">Growth Loop</a> — see what is true, shape the system, source
+      <a href="/consulting/">Growth Loop</a> — see what is true, shape the system, source
       the right people, strengthen them, and sustain it with evidence. Which steps apply
       depends entirely on what a health check finds, and we start there rather than arriving
       with a fixed answer.</p>
@@ -70,7 +70,7 @@ def client(slug, name, title, meta, sector, lede, intro, problems, services,
         cta_p=("Tell us what is going wrong. A thirty-minute call costs nothing, and you will "
                "leave it clearer about your actual problem than when you came in."),
         wa="Hi%20AllAboutHR%20%E2%80%94%20I%20saw%20your%20client%20page%20and%20would%20like%20to%20talk%20about%20my%20organisation.",
-        cta_second=("/#/about", "See every client"),
+        cta_second=("/clients/", "See every client"),
     )
 
 
@@ -86,7 +86,7 @@ client(
           "roles."),
     intro="""      <p>Nahar Group of Companies is one of the fifty-plus organisations we have worked with
       since 2023, and sits in the manufacturing and industrial group on
-      <a href="/#/about">our client wall</a>.</p>
+      <a href="/clients/">our client wall</a>.</p>
       <p>One placement there is a matter of public record, because the candidate wrote about it
       herself:</p>
       <blockquote>
@@ -132,7 +132,7 @@ client(
           "organisations on our client wall."),
     intro="""      <p>JCBL is one of the fifty-plus organisations we have worked with since 2023, and sits
       in the manufacturing, engineering and industrial group on
-      <a href="/#/about">our client wall</a>.</p>""",
+      <a href="/clients/">our client wall</a>.</p>""",
     problems=[
         "<strong>Skilled trades are hard to replace.</strong> Fabricators, welders, quality "
         "inspectors and maintenance engineers take months to find and days to lose to a "
@@ -151,7 +151,7 @@ client(
         "person the same way.",
         "<strong><a href=\"/training/\">Manager development</a></strong> for supervisors "
         "promoted on technical strength.",
-        "<strong>Kinexus Systems</strong> &mdash; a <a href=\"/#/kinexus\">Baseline</a> that "
+        "<strong>Kinexus Systems</strong> &mdash; a <a href=\"/kinexus/\">Baseline</a> that "
         "counts the hours lost re-typing information between the shop floor and the office.",
     ],
 )
@@ -167,7 +167,7 @@ client(
           "client wall."),
     intro="""      <p>Amit Engineers is one of the fifty-plus organisations we have worked with since 2023,
       and sits in the manufacturing, engineering and industrial group on
-      <a href="/#/about">our client wall</a>. They are also local to us &mdash; we are both in
+      <a href="/clients/">our client wall</a>. They are also local to us &mdash; we are both in
       Mohali.</p>""",
     problems=[
         "<strong>Everything waits for the owner.</strong> Leave, hiring, salary, a complaint "
@@ -205,7 +205,7 @@ client(
           "our client wall."),
     intro="""      <p>Shoolini University is one of the fifty-plus organisations we have worked with since
       2023, and sits in the education and training group on
-      <a href="/#/about">our client wall</a>.</p>
+      <a href="/clients/">our client wall</a>.</p>
       <p>Universities sit on both sides of our business at once: they are employers with their
       own HR to run, and they are where the next intake of talent comes from. Our campus
       programme, <a href="/recruitxcel/">RecruitXcel</a>, exists because of partnerships like
@@ -245,7 +245,7 @@ client(
           "client wall. Also listed as R B University."),
     intro="""      <p>Rayat Bahra University is one of the fifty-plus organisations we have worked with
       since 2023, and sits in the education and training group on
-      <a href="/#/about">our client wall</a>. They are local to us, in Mohali.</p>
+      <a href="/clients/">our client wall</a>. They are local to us, in Mohali.</p>
       <p>As with every institution we work with, the relationship runs in both directions: a
       university is an employer with its own HR function to run, and it is also where a large
       part of the next intake of talent comes from.</p>""",
@@ -281,12 +281,12 @@ TESTI_NOTE = """
       <div class="note">
         <h4>Where this came from</h4>
         <p>This is reproduced word for word as it was given to us. You can read more of what
-        clients and candidates say on our <a href="/#/review">reviews page</a>, which links
+        clients and candidates say on our <a href="/testimonials/">testimonials page</a>, which links
         through to 125+ five-star reviews on Google.</p>
       </div>"""
 
 TESTI_CARDS = [
-    ("/#/review", "p", "Reviews", "More reviews",
+    ("/testimonials/", "p", "Reviews", "More reviews",
      "125+ five-star Google reviews from the businesses and candidates we have worked with.",
      "Read them"),
     ("/job-openings/", "p", "Candidates", "Looking for a job?",
@@ -320,7 +320,7 @@ def testimonial(slug, name, who, title, meta, eyebrow, lede, quote, intro, outro
         cta_p=("Whether you are hiring or looking, one message is enough to start. You will get "
                "a straight answer either way."),
         wa="Hi%20AllAboutHR%20%E2%80%94%20I%20read%20a%20testimonial%20on%20your%20site%20and%20would%20like%20to%20talk.",
-        cta_second=("/#/review", "Read more reviews"),
+        cta_second=("/testimonials/", "Read more reviews"),
     )
 
 
@@ -454,7 +454,7 @@ add(
 
       <h2>Where it sits in the Growth Loop</h2>
       <p>This is steps one and two — <strong>See</strong> and <strong>Shape</strong> — of our
-      <a href="/#/consulting">Growth Loop</a>. Everything else (hiring, training, appraisals,
+      <a href="/consulting/">Growth Loop</a>. Everything else (hiring, training, appraisals,
       increments) is cheaper and works better once these two are done, which is precisely why
       we will not sell you step three first.</p>
 
@@ -463,13 +463,13 @@ add(
       how many, of what kind, by when, and what it costs. If the honest answer is that you are
       not ready for us yet, you will get that answer too.</p>""",
     cards=[
-        ("/#/consulting", "p", "Consulting", "The Growth Loop",
+        ("/consulting/", "p", "Consulting", "The Growth Loop",
          "Five steps from “something is wrong” to “here is the proof it improved”.",
          "See how we work"),
         ("/we-provide-best-ideas-for-the-business-growth/", "p", "Growth", "Innovative HR ideas",
          "A-to-Z HR solutions, from talent acquisition to compliance management.",
          "Read more"),
-        ("/#/packages", "t", "Packages", "Six packages",
+        ("/packages/", "t", "Packages", "Six packages",
          "What each one includes, and when it stops being the right fit.",
          "Compare them"),
     ],
@@ -507,7 +507,7 @@ add(
       <p>Not in the vocabulary. Three things we do that most HR firms do not:</p>
       <ul>
         <li><strong>We built the software.</strong> A policy in a folder gets ignored; the same
-        rules inside <a href="/#/alvora">the system your managers use every day</a> get
+        rules inside <a href="/alvora/">the system your managers use every day</a> get
         followed. That is the difference between advice and change.</li>
         <li><strong>Every number traces to a document.</strong> A score only moves when someone
         submits proof and a manager approves it. When an employee asks why they got a rating,
@@ -522,7 +522,7 @@ add(
         <h4>Growth has a shape</h4>
         <p>What a business needs at ten people, at a hundred and at a thousand are genuinely
         different problems, and buying the wrong one is expensive. That is why there are
-        <a href="/#/packages">six packages</a> rather than one: each says what problem it
+        <a href="/packages/">six packages</a> rather than one: each says what problem it
         solves, exactly what is included, and <strong>when it stops being the right fit</strong>
         — so you know in advance when it is time to move up.</p>
       </div>
@@ -539,7 +539,7 @@ add(
         ("/we-help-you-to-make-business-stratgey/", "p", "Strategy", "Business strategy",
          "Org design, headcount plans and goals that actually cascade.",
          "Read more"),
-        ("/#/alvora", "t", "Software", "Alvora",
+        ("/alvora/", "t", "Software", "Alvora",
          "Four platforms where every number traces back to the document it came from.",
          "See the platforms"),
     ],
@@ -585,7 +585,7 @@ add(
       <a href="/jobs/">hiring</a>, HR operations on a system,
       <a href="/training/">development</a>, compliance you can prove, and appraisals and
       increments that stand up when challenged. Six packages cover it from ten people upwards —
-      <a href="/#/packages">see which one fits</a>.</p>
+      <a href="/packages/">see which one fits</a>.</p>
 
       <div class="note plum">
         <h4>Why we do both</h4>
