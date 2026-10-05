@@ -73,6 +73,11 @@ def html_files():
                 rel = os.path.relpath(full, ROOT).replace("\\", "/")
                 if rel == "index.html":
                     continue  # the SPA is not ours to validate here
+                if fn.startswith("google") and fn.endswith(".html") \
+                        and "/" not in rel:
+                    continue  # Search Console verification file — one line of
+                    # plain text by design, served as-is. Must not be edited,
+                    # wrapped in a page, or listed in the sitemap.
                 out.append((rel, full))
     return sorted(out)
 
