@@ -174,7 +174,7 @@ fire.
 ## What you must change before it goes live
 
 1. **The contact email.** The form in `index.html` composes a `mailto:` to
-   `hello@allabouthr.co`. Search for that address and replace it if it is wrong. If you want
+   `mahavir.singh@allabouthr.co`, matching the Google Business Profile. If you want
    a real backend form, wire the `#cform` submit handler to Formspree, Netlify Forms or your
    own endpoint — the handler is at the bottom of the script block and is about fifteen
    lines. The recovered pages use the same address, set once in `tools/shell.py`.
@@ -205,11 +205,11 @@ fire.
    `/contact-us/`, and as a complete `PostalAddress` with `postalCode` and `hasMap` in the
    `Organization` and `ContactPage` schema. Set once in `tools/shell.py`.
 
-   **Two things to keep an eye on.** The Business Profile lists
-   `mahavir.singh@allabouthr.co` while the site uses `hello@allabouthr.co` — not an NAP
-   problem (name, address and phone all match), but worth aligning. And **no geo coordinates
-   are published**, because I had no verified latitude/longitude and would not guess; adding
-   `geo` to the `Organization` block is a small further win for the map pack.
+   **One thing to keep an eye on.** The email now matches the Business Profile
+   (`mahavir.singh@allabouthr.co`, set on 12 October 2026), so name, address, phone and email
+   all agree. But **no geo coordinates are published**, because I had no verified
+   latitude/longitude and would not guess; adding `geo` to the `Organization` block is a
+   small further win for the map pack.
 
 3. **The five client pages need your facts.** `/jcbl/`, `/nahar-group-of-companies/`,
    `/amit-engineers-mohali/`, `/shoolini-university/` and `/r-b-university-mohali/` state the

@@ -260,7 +260,7 @@ add(
       <h2>How to apply</h2>
       <ol class="steps">
         <li><span>Send your CV on <a href="https://wa.me/917696004555?text=Hi%20AllAboutHR%20%E2%80%94%20I%20am%20looking%20for%20a%20job.%20Here%20is%20my%20CV." target="_blank" rel="noopener">WhatsApp</a>
-        or by email to <a href="mailto:hello@allabouthr.co">hello@allabouthr.co</a>.</span></li>
+        or by email to <a href="mailto:mahavir.singh@allabouthr.co">mahavir.singh@allabouthr.co</a>.</span></li>
         <li><span>Tell us three things in the message: <em>the role you want</em>, <em>your
         current location and notice period</em>, and <em>your expected salary</em>. It saves a
         round of questions.</span></li>
@@ -732,7 +732,7 @@ add(
 add(
     slug="contact-us",
     title="Contact Us — AllAboutHR, Mohali",
-    meta=("Talk to AllAboutHR: WhatsApp +91 76960 04555, email hello@allabouthr.co. Based in "
+    meta=("Talk to AllAboutHR: WhatsApp +91 76960 04555 or email mahavir.singh@allabouthr.co. "
           "Mohali, Punjab, working with clients across India. We usually reply the same day."),
     eyebrow="Contact",
     h1="Tell us what is going wrong.",
@@ -742,7 +742,7 @@ add(
     content="""      <dl class="facts">
         <div><dt>WhatsApp</dt><dd><a href="https://wa.me/917696004555?text=Hi%20AllAboutHR%20%E2%80%94%20I%20would%20like%20to%20talk%20about%20my%20business." target="_blank" rel="noopener">+91 76960 04555</a> &mdash; fastest</dd></div>
         <div><dt>Phone</dt><dd><a href="tel:+917696004555">+91 76960 04555</a></dd></div>
-        <div><dt>Email</dt><dd><a href="mailto:hello@allabouthr.co">hello@allabouthr.co</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:mahavir.singh@allabouthr.co">mahavir.singh@allabouthr.co</a></dd></div>
         <div><dt>Address</dt><dd><address style="font-style:normal;line-height:1.6">Chamber No. 209, Second Floor, AB Chambers,<br>SCO No. 1068, Mattaur, Sector 70,<br>SAS Nagar (Mohali), Punjab 160071</address>
           <a href="https://www.google.com/maps/place/?q=place_id:ChIJs49QZn_pDzkRCLf3CWTHPVo" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></dd></div>
         <div><dt>Working with</dt><dd>Clients across India, from ten people to 2,500</dd></div>
@@ -790,7 +790,7 @@ add(
 {"@context":"https://schema.org","@type":"ContactPage","@id":"https://allabouthr.co/contact-us/",
 "mainEntity":{"@id":"https://allabouthr.co/#organization"},
 "about":{"@type":"ProfessionalService","name":"AllAboutHR",
- "telephone":"+91-76960-04555","email":"hello@allabouthr.co",
+ "telephone":"+91-76960-04555","email":"mahavir.singh@allabouthr.co",
  "url":"https://allabouthr.co",
  "address":{"@type":"PostalAddress","streetAddress":"Chamber No. 209, Second Floor, AB Chambers, SCO No. 1068, Mattaur, Sector 70","addressLocality":"Mohali","addressRegion":"Punjab","postalCode":"160071","addressCountry":"IN"},
  "hasMap":"https://www.google.com/maps/place/?q=place_id:ChIJs49QZn_pDzkRCLf3CWTHPVo",

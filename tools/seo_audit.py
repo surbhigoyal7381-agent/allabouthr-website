@@ -28,6 +28,10 @@ def files():
             if fn.endswith(".html"):
                 full = os.path.join(dirpath, fn)
                 rel = os.path.relpath(full, ROOT).replace("\\", "/")
+                if fn.startswith("google") and "/" not in rel:
+                    continue  # Search Console verification token: one line of
+                    # plain text by design, not a page. Auditing it as one just
+                    # produces noise about missing Open Graph and thin content.
                 out.append((rel, full))
     return sorted(out)
 

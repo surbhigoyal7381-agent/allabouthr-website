@@ -10,7 +10,7 @@ SITE = "https://allabouthr.co"
 WA = "https://wa.me/917696004555"
 PHONE_DISPLAY = "+91 76960 04555"
 PHONE_HREF = "+917696004555"
-MAIL = "hello@allabouthr.co"
+MAIL = "mahavir.singh@allabouthr.co"
 
 # From the Google Business Profile (place id ChIJs49QZn_pDzkRCLf3CWTHPVo).
 STREET = "Chamber No. 209, Second Floor, AB Chambers, SCO No. 1068, Mattaur, Sector 70"
